@@ -6,4 +6,4 @@ Need to install raisim first: https://github.com/ZhaomingXie/raisimLib/tree/jugg
 
 Good behavior should emerge within 30 minutes of training. 
 Thanks to some code optimization, reference to some design choices from [IsaacGym](https://arxiv.org/abs/2108.10470),
-and the fast simulation speed of raisim, the training is much faster than what is originally reported in the paper.
+and the fast simulation speed of raisim, training is much faster than what is originally reported in the paper.
