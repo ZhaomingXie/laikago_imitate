@@ -1,8 +1,3 @@
-//----------------------------//
-// This file is part of RaiSim//
-// Copyright 2020, RaiSim Tech//
-//----------------------------//
-
 #pragma once
 
 #include <stdlib.h>
@@ -82,8 +77,6 @@ class ENVIRONMENT : public RaisimGymEnv {
   }
 
   void reset() final {
-    speed_ = 0;
-    mode_ = 1;
     total_reward_ = 0;
     sim_step_ = 0;
     phase_ = 0;
