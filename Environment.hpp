@@ -82,13 +82,13 @@ class ENVIRONMENT : public RaisimGymEnv {
     phase_ = 0;
     phase_ = rand() % max_phase_;
     gv_init_[0] = speed_;
-    getReference();
+    getKinematicReference();
     laikago_->setState(reference_, gv_init_);
     updateObservation();
   }
 
   float step(const Eigen::Ref<EigenVec>& action) final {
-    getReference();
+    getKinematicReference();
     /// action scaling
     pTarget12_ = action.cast<double>();
     pTarget12_ += reference_.tail(nJoints_);
@@ -158,7 +158,7 @@ class ENVIRONMENT : public RaisimGymEnv {
     return false;
   }
 
-  void getReference() {
+  void getKinematicReference() {
     reference_[0] = speed_ * sim_step_ * 0.025;
     reference_[1] = 0;
     reference_[2] = 0.5;
